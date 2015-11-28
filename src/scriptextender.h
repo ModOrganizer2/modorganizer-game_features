@@ -14,7 +14,11 @@ public:
 
   virtual QString loaderName() const = 0;
 
+  virtual QString loaderPath() const = 0;
+
   virtual QStringList saveGameAttachmentExtensions() const = 0;
+
+  virtual bool isInstalled() const = 0;
 
 };
 
