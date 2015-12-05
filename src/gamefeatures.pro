@@ -18,6 +18,7 @@ SOURCES +=
 HEADERS += \
     bsainvalidation.h \
     scriptextender.h \
-    dataarchives.h
+    dataarchives.h \
+    savegameinfo.h
 
 INCLUDEPATH += $${PWD}/../../uibase
