@@ -25,6 +25,10 @@ public:
   /** Returns true if the extender is installed */
   virtual bool isInstalled() const = 0;
 
+  /** Get version of extender */
+  virtual QString getExtenderVersion() const = 0;
+
+
 };
 
 #endif // SCRIPTEXTENDER
