@@ -1,11 +1,10 @@
 #ifndef DATAARCHIVES
 #define DATAARCHIVES
 
+namespace MOBase { class IProfile; }
 
-#include <iprofile.h>
-#include <QString>
-#include <QStringList>
-
+class QString;
+class QStringList;
 
 class DataArchives {
 

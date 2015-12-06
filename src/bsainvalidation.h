@@ -1,9 +1,9 @@
 #ifndef BSAINVALIDATION_H
 #define BSAINVALIDATION_H
 
+namespace MOBase { class IProfile; }
 
-#include <iprofile.h>
-#include <QString>
+class QString;
 
 class BSAInvalidation
 {
