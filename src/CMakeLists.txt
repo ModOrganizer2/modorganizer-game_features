@@ -4,7 +4,6 @@ CMAKE_POLICY(SET CMP0020 NEW)
 CMAKE_POLICY(SET CMP0043 NEW)
 
 SET(gamefeatures_SRCS
-	
   )
 
 SET(gamefeatures_HDRS
@@ -12,6 +11,7 @@ SET(gamefeatures_HDRS
     scriptextender.h
     dataarchives.h
     localsavegames.h
+    gameplugins.h
   )
 
 INCLUDE_DIRECTORIES(../../uibase/src)
