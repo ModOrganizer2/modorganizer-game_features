@@ -12,6 +12,7 @@ SET(gamefeatures_HDRS
     dataarchives.h
     localsavegames.h
     gameplugins.h
+    unmanagedmods.h
   )
 
 INCLUDE_DIRECTORIES(../../uibase/src)
