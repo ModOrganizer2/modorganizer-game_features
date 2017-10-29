@@ -14,7 +14,7 @@ public:
   virtual QString BinaryName() const = 0;
   
     /** Get the script extender plugin path*/
-  virtual QString PluginFolder() const = 0;
+  virtual QString PluginPath() const = 0;
 
 
   /** The loader to use to ensure the game runs with the script extender */
