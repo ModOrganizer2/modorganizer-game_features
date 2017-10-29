@@ -10,8 +10,12 @@ public:
 
   virtual ~ScriptExtender() {}
 
-  /** Get the name of the script extender */
-  virtual QString name() const = 0;
+  /** Get the name of the script extender binary */
+  virtual QString BinaryName() const = 0;
+  
+    /** Get the script extender plugin path*/
+  virtual QString PluginFolder() const = 0;
+
 
   /** The loader to use to ensure the game runs with the script extender */
   virtual QString loaderName() const = 0;
