@@ -1,6 +1,8 @@
 #ifndef SCRIPTEXTENDER
 #define SCRIPTEXTENDER
 
+#include <windows.h>
+
 class QString;
 class QStringList;
 
@@ -32,7 +34,8 @@ public:
   /** Get version of extender */
   virtual QString getExtenderVersion() const = 0;
 
-
+  /** Get CPU platform of extender */
+  virtual WORD getArch() const = 0;
 };
 
 #endif // SCRIPTEXTENDER
