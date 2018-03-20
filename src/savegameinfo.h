@@ -42,6 +42,9 @@ public:
    * nice visual way of displaying save game contents
    */
   virtual MOBase::ISaveGameInfoWidget *getSaveGameWidget(QWidget *parent = 0) const = 0;
+
+  /** Return whether or not the save has a paired script extender save */
+  virtual bool hasScriptExtenderSave(QString const &file) const = 0;
 };
 
 #endif // SAVEGAMEINFO_H
