@@ -17,6 +17,8 @@ public:
 
   virtual void activate(MOBase::IProfile *profile) = 0;
 
+  virtual void prepareProfile(MOBase::IProfile *profile) = 0;
+
 };
 
 #endif // BSAINVALIDATION_H
