@@ -41,6 +41,13 @@ public:
    */
   virtual bool dataLooksValid(std::shared_ptr<const MOBase::IFileTree> fileTree) const = 0;
 
+public:
+
+  /**
+   *
+   */
+  virtual ~ModDataChecker() { }
+
 };
 
 #endif
