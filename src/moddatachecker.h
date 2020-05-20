@@ -16,15 +16,6 @@ class ModDataChecker {
 public:
 
   /**
-   * @brief The name of the data folder for the game.
-   *
-   * For instance, for GameBryo games it is simply "data'.
-   *
-   * @return the name of the data folder. 
-   */
-  virtual QString getDataFolderName() const = 0;
-
-  /**
    * @brief Check that the given filetree representing a valid mod layout.
    *
    * This method is mainly used during installation (to find which installer should
