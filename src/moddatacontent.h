@@ -51,19 +51,6 @@ public:
    */
   virtual std::vector<int> getContentsFor(std::shared_ptr<const MOBase::IFileTree> fileTree) const = 0;
 
-  /**
-   * @brief Check if the given tree contain the given content.
-   *
-   * @param fileTree The tree corresponding to the mod to check.
-   * @param contentId The ID of the content to lookup.
-   *
-   * @return true if the given tree contains the given content, false otherwize.
-   */
-  virtual bool hasContent(std::shared_ptr<const MOBase::IFileTree> fileTree, int contentId) const {
-    auto contents = getContentsFor(fileTree);
-    return std::find(std::begin(contents), std::end(contents), contentId) != std::end(contents);
-  }
-
 public:
 
   /**
