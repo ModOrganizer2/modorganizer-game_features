@@ -13,7 +13,7 @@ class ModDataChecker {
 public:
 
   /**
-   * @brief Check that the given filetree representing a valid mod layout.
+   * @brief Check that the given filetree represent a valid mod layout.
    *
    * This method is mainly used during installation (to find which installer should
    * be used or to recurse into multi-level archives), or to quickly indicates to a 
