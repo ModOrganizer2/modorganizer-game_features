@@ -2,9 +2,6 @@
 #define MODDATACHECKER_H
 
 #include <memory>
-#include <vector>
-
-#include <QString>
 
 namespace MOBase {
 
