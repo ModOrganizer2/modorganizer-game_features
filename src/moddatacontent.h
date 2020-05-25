@@ -13,6 +13,34 @@ namespace MOBase {
 
 };
 
+/**
+ * The ModDataContent feature is used (when available) to indicate to users the content
+ * of mods in the "Content" column.
+ *
+ * The feature exposes a list of possible content types, each associated with an ID, a name
+ * and an icon. The icon is the path to either:
+ *   - A Qt resource or;
+ *   - A file on the disk.
+ *
+ * In order to facilitate the implementation, MO2 already provides a set of icons that can
+ * be used. Those icons are all under :/MO/gui/content (e.g. :/MO/gui/content/plugin or :/MO/gui/content/music). 
+ *
+ * The list of available icons is:
+ *  - plugin: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/jigsaw-piece.png
+ *  - skyproc: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/hand-of-god.png
+ *  - texture: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/empty-chessboard.png
+ *  - music: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/double-quaver.png
+ *  - sound: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/lyre.png
+ *  - interface: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/usable.png
+ *  - skse: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/checkbox-tree.png
+ *  - script: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/tinker.png
+ *  - mesh: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/breastplate.png
+ *  - string: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/conversation.png
+ *  - bsa: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/locked-chest.png
+ *  - menu: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/config.png
+ *  - inifile: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/feather-and-scroll.png
+ *  - modgroup: https://github.com/ModOrganizer2/modorganizer/blob/master/src/resources/contents/xedit.png
+ */
 class ModDataContent {
 public:
 
