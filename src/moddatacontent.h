@@ -52,17 +52,47 @@ public:
      * @param icon Path to the icon for this content. Can be either a path 
      *     to an image on the disk, or to a resource.
      */
-    Content(int id, QString name, QString icon) : m_Id{ id }, m_Name { name }, m_Icon{ icon } { }
+    Content(int id, QString name, QString icon) : 
+      m_Id{ id }, m_Name{ name }, m_Icon{ icon }, m_FilterOnly{ false } { }
 
+    /**
+     * @param id ID of this content.
+     * @param name Name of this content.
+     * @param icon Path to the icon for this content. Can be either a path
+     *     to an image on the disk, or to a resource. Can be an empty string if filterOnly
+     *     is true.
+     * @param filterOnly Indicates if the content should only be show in the filter 
+     *     criteria and not in the actual Content column.
+     */
+    Content(int id, QString name, QString icon, bool filterOnly) : 
+      m_Id{ id }, m_Name{ name }, m_Icon{ icon }, m_FilterOnly{ filterOnly }  { }
+
+    /**
+     * @return the ID of this content.
+     */
     int id() const { return m_Id; }
+    
+    /**
+     * @return the name of this content.
+     */
     QString name() const { return m_Name; }
+    
+    /**
+     * @return the path to the icon of this content (can be a Qt resource path).
+     */
     QString icon() const { return m_Icon; }
   
+    /**
+     * @return true if this content is only meant to be used as a filter criteria.
+     */
+    bool isOnlyForFilter() const { return m_FilterOnly; }
+
   private:
 
     int m_Id;
     QString m_Name;
     QString m_Icon;
+    bool m_FilterOnly;
   };
 
   /**
