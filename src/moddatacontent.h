@@ -49,22 +49,13 @@ public:
     /**
      * @param id ID of this content.
      * @param name Name of this content.
-     * @param icon Path to the icon for this content. Can be either a path 
-     *     to an image on the disk, or to a resource.
-     */
-    Content(int id, QString name, QString icon) : 
-      m_Id{ id }, m_Name{ name }, m_Icon{ icon }, m_FilterOnly{ false } { }
-
-    /**
-     * @param id ID of this content.
-     * @param name Name of this content.
      * @param icon Path to the icon for this content. Can be either a path
      *     to an image on the disk, or to a resource. Can be an empty string if filterOnly
      *     is true.
      * @param filterOnly Indicates if the content should only be show in the filter 
      *     criteria and not in the actual Content column.
      */
-    Content(int id, QString name, QString icon, bool filterOnly) : 
+    Content(int id, QString name, QString icon, bool filterOnly = false) : 
       m_Id{ id }, m_Name{ name }, m_Icon{ icon }, m_FilterOnly{ filterOnly }  { }
 
     /**
