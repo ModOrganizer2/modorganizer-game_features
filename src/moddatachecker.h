@@ -13,6 +13,15 @@ class ModDataChecker {
 public:
 
   /**
+   *
+   */
+  enum class CheckReturn {
+    INVALID,
+    FIXABLE,
+    VALID
+  };
+
+  /**
    * @brief Check that the given filetree represent a valid mod layout.
    *
    * This method is mainly used during installation (to find which installer should
@@ -27,7 +36,21 @@ public:
    *
    * @return whether or not the tree looks valid.
    */
-  virtual bool dataLooksValid(std::shared_ptr<const MOBase::IFileTree> fileTree) const = 0;
+  virtual CheckReturn dataLooksValid(std::shared_ptr<const MOBase::IFileTree> fileTree) const = 0;
+
+  /**
+   * @brief Try to fix the given tree.
+   *
+   * This method is used during installation to try to fix invalid archives and will only be
+   * called if dataLooksValid returned FIXABLE.
+   *
+   * @param tree The tree to try to fix. Can be modified during the process.
+   *
+   * @return the fixed tree, or a null pointer if the tree could not be fixed.
+   */
+  virtual std::shared_ptr<MOBase::IFileTree> fix(std::shared_ptr<MOBase::IFileTree> fileTree) const {
+    return nullptr;
+  }
 
 public:
 
