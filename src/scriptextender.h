@@ -2,9 +2,9 @@
 #define SCRIPTEXTENDER
 
 #include <windows.h>
+#include <QStringList>
 
 class QString;
-class QStringList;
 
 class ScriptExtender {
 

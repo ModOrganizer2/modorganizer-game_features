@@ -1,13 +1,14 @@
 #ifndef SAVEGAMEINFO_H
 #define SAVEGAMEINFO_H
 
+#include <QStringList>
+
 namespace MOBase { class ISaveGame; }
 namespace MOBase { class ISaveGameInfoWidget; }
 
 #include <QMap>
 
 class QString;
-class QStringList;
 class QWidget;
 
 /** Feature to get hold of stuff to do with save games */
